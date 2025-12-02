@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Swarm Shield — Open-Source AI Security Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Swarm Shield is an open-source AI security platform providing multi-agent threat detection, monitoring dashboards, and cloud automations for developers, schools, and organizations."
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <!-- Tailwind via CDN (no build step needed) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: "#020617",
+              surface: "#020617",
+              surfaceAlt: "#020617",
+              primary: "#1d4ed8",
+              primarySoft: "#1e293b",
+              accent: "#38bdf8",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background text-slate-100 antialiased">
+    <!-- Page wrapper -->
+    <div class="min-h-screen flex flex-col">
+      <!-- Navigation -->
+      <header class="border-b border-slate-800/60 bg-slate-950/70 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between py-4">
+            <!-- Logo + brand -->
+            <a href="#top" class="flex items-center gap-3">
+              <!-- Logo placeholder circle – swap with your SVG later -->
+              <div
+                class="h-10 w-10 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/40"
+              >
+                <span class="text-xl font-black tracking-tight">S</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-semibold tracking-tight text-slate-50">
+                  Swarm Shield
+                </span>
+                <span class="text-xs text-slate-400">
+                  AI Security & Multi-Agent Defense
+                </span>
+              </div>
+            </a>
+
+            <!-- Desktop nav -->
+            <nav class="hidden md:flex items-center gap-6 text-sm">
+              <a href="#products" class="text-slate-300 hover:text-accent"
+                >Products</a
+              >
+              <a href="#developers" class="text-slate-300 hover:text-accent"
+                >Developers</a
+              >
+              <a href="#sponsors" class="text-slate-300 hover:text-accent"
+                >Sponsors</a
+              >
+              <a href="#company" class="text-slate-300 hover:text-accent"
+                >Company</a
+              >
+            </nav>
+
+            <!-- Right side actions -->
+            <div class="hidden md:flex items-center gap-3">
+              <a
+                href="https://github.com/Bxk756"
+                target="_blank"
+                class="text-xs sm:text-sm text-slate-300 hover:text-accent underline-offset-4 hover:underline"
+                >GitHub</a
+              >
+              <a
+                href="https://github.com/sponsors/Bxk756"
+                target="_blank"
+                class="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-1.5 text-xs sm:text-sm font-semibold text-white shadow-md shadow-blue-500/40 hover:bg-blue-700 transition"
+              >
+                <span>Become a Sponsor</span>
+                <span class="text-base">★</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main content -->
+      <main id="top" class="flex-1">
+        <!-- Hero section -->
+        <section class="relative overflow-hidden">
+          <!-- Glow background -->
+          <div
+            class="pointer-events-none absolute inset-0 opacity-60 blur-3xl"
+            aria-hidden="true"
+          >
+            <div
+              class="bg-gradient-to-br from-blue-500/30 via-cyan-400/10 to-purple-600/10 w-[40rem] h-[40rem] -top-40 -right-32 rounded-full"
+            ></div>
+            <div
+              class="bg-gradient-to-tr from-sky-400/20 via-indigo-500/10 to-emerald-400/20 w-[30rem] h-[30rem] -bottom-40 -left-40 rounded-full"
+            ></div>
+          </div>
+
+          <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+              <!-- Left: Text -->
+              <div>
+                <span
+                  class="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/80 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-slate-300 mb-4"
+                >
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  Open-Source AI Security Platform
+                </span>
+
+                <h1
+                  class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-50 mb-4"
+                >
+                  Make your AI systems
+                  <span class="text-accent">safer by design</span>.
+                </h1>
+
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                  Swarm Shield unifies multi-agent threat detection, real-time
+                  monitoring, and cloud security automations into one open-source
+                  platform — built for developers, schools, and small
+                  organizations that can’t afford enterprise tools.
+                </p>
+
+                <div class="flex flex-wrap gap-3 mb-6">
+                  <a
+                    href="#products"
+                    class="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white shadow-md shadow-blue-500/40 hover:bg-blue-700 transition"
+                  >
+                    Explore the Platform
+                  </a>
+                  <a
+                    href="https://github.com/sponsors/Bxk756"
+                    target="_blank"
+                    class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/70 px-5 py-2 text-sm font-medium text-slate-100 hover:border-accent hover:text-accent transition"
+                  >
+                    ★ Sponsor on GitHub
+                  </a>
+                </div>
+
+                <div class="flex flex-wrap gap-4 text-xs text-slate-400">
+                  <div class="flex items-center gap-2">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    <span>Multi-agent threat detection</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    <span>Cloudflare + Vercel native</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    <span>Built in public on GitHub</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Card summary -->
+              <div
+                class="relative lg:pl-6 mt-6 lg:mt-0"
+              >
+                <div
+                  class="rounded-3xl border border-slate-800/80 bg-slate-950/70 shadow-2xl shadow-sky-500/10 p-5 sm:p-6 backdrop-blur"
+                >
+                  <div class="flex items-center justify-between mb-4">
+                    <div>
+                      <p class="text-xs uppercase tracking-[0.22em] text-slate-400">
+                        Swarm Shield Stack
+                      </p>
+                      <p class="text-sm font-medium text-slate-100">
+                        Unified AI Security Layers
+                      </p>
+                    </div>
+                    <span
+                      class="inline-flex items-center rounded-full bg-emerald-500/10 px-2.5 py-1 text-[11px] font-medium text-emerald-300 border border-emerald-500/40"
+                    >
+                      Live Traffic
+                    </span>
+                  </div>
+
+                  <div class="space-y-3 text-xs">
+                    <div class="flex items-center justify-between">
+                      <span class="text-slate-300">Swarm Sentinel</span>
+                      <span class="text-slate-400">Agent-based detection</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-slate-300">A2A Shield</span>
+                      <span class="text-slate-400">Secure AI↔AI APIs</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-slate-300">WatchfulEye</span>
+                      <span class="text-slate-400">Monitoring & logs</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-slate-300">BrightHead</span>
+                      <span class="text-slate-400">Education & labs</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-slate-300">RevolutionTomorrow</span>
+                      <span class="text-slate-400">R&amp;D experiments</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-5 border-t border-slate-800 pt-4">
+                    <p class="text-[11px] uppercase tracking-[0.22em] text-slate-400 mb-2">
+                      Deployed Across
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-[11px] text-slate-300">
+                      <span
+                        class="inline-flex items-center rounded-full bg-slate-900/80 px-3 py-1 border border-slate-700"
+                        >Cloudflare</span
+                      >
+                      <span
+                        class="inline-flex items-center rounded-full bg-slate-900/80 px-3 py-1 border border-slate-700"
+                        >Vercel</span
+                      >
+                      <span
+                        class="inline-flex items-center rounded-full bg-slate-900/80 px-3 py-1 border border-slate-700"
+                        >GitHub</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Products section -->
+        <section id="products" class="border-t border-slate-800/60 bg-slate-950/70">
+          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-semibold text-slate-50">
+                  The Swarm Shield Platform
+                </h2>
+                <p class="mt-2 text-sm text-slate-400 max-w-xl">
+                  Modular products that work together to protect AI-powered apps
+                  — from raw logs and events to agent-level behavior.
+                </p>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Swarm Sentinel -->
+              <a
+                href="https://sentinel.swarmshield.cloud"
+                class="group rounded-2xl border border-slate-800 bg-slate-950/70 p-4 hover:border-accent/70 hover:-translate-y-1 transition transform"
+              >
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="font-semibold text-slate-50 text-sm">
+                    Swarm Sentinel
+                  </h3>
+                  <span
+                    class="text-[11px] rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/40 px-2 py-0.5"
+                    >Agents</span
+                  >
+                </div>
+                <p class="text-xs text-slate-400 mb-3">
+                  Multi-agent threat detection for AI-driven apps. Analyze events,
+                  spot anomalies, and surface high-risk behavior in real time.
+                </p>
+                <p class="text-[11px] text-accent group-hover:underline">
+                  Visit Sentinel →
+                </p>
+              </a>
+
+              <!-- A2A Shield -->
+              <a
+                href="https://a2a.swarmshield.cloud"
+                class="group rounded-2xl border border-slate-800 bg-slate-950/70 p-4 hover:border-accent/70 hover:-translate-y-1 transition transform"
+              >
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="font-semibold text-slate-50 text-sm">
+                    A2A Shield
+                  </h3>
+                  <span
+                    class="text-[11px] rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/40 px-2 py-0.5"
+                    >APIs</span
+                  >
+                </div>
+                <p class="text-xs text-slate-400 mb-3">
+                  Harden AI↔AI and app↔AI communication with logging, rate limits,
+                  routing, and safety rails built for LLM workflows.
+                </p>
+                <p class="text-[11px] text-accent group-hover:underline">
+                  Visit A2A Shield →
+                </p>
+              </a>
+
+              <!-- WatchfulEye -->
+              <a
+                href="https://watchful.swarmshield.cloud"
+                class="group rounded-2xl border border-slate-800 bg-slate-950/70 p-4 hover:border-accent/70 hover:-translate-y-1 transition transform"
+              >
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="font-semibold text-slate-50 text-sm">
+                    WatchfulEye Research
+                  </h3>
+                  <span
+                    class="text-[11px] rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/40 px-2 py-0.5"
+                    >Monitoring</span
+                  >
+                </div>
+                <p class="text-xs text-slate-400 mb-3">
+                  Lightweight observability for AI logs, prompts, and responses.
+                  Designed for small teams, classrooms, and labs.
+                </p>
+                <p class="text-[11px] text-accent group-hover:underline">
+                  Visit WatchfulEye →
+                </p>
+              </a>
+
+              <!-- BrightHead -->
+              <a
+                href="https://brighthead.swarmshield.cloud"
+                class="group rounded-2xl border border-slate-800 bg-slate-950/70 p-4 hover:border-accent/70 hover:-translate-y-1 transition transform"
+              >
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="font-semibold text-slate-50 text-sm">
+                    BrightHead
+                  </h3>
+                  <span
+                    class="text-[11px] rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/40 px-2 py-0.5"
+                    >Education</span
+                  >
+                </div>
+                <p class="text-xs text-slate-400 mb-3">
+                  AI security learning kits, dashboards, and worksheets for
+                  students and self-taught engineers stepping into AI safety.
+                </p>
+                <p class="text-[11px] text-accent group-hover:underline">
+                  Visit BrightHead →
+                </p>
+              </a>
+
+              <!-- RevolutionTomorrow Labs -->
+              <a
+                href="https://labs.swarmshield.cloud"
+                class="group rounded-2xl border border-slate-800 bg-slate-950/70 p-4 hover:border-accent/70 hover:-translate-y-1 transition transform"
+              >
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="font-semibold text-slate-50 text-sm">
+                    RevolutionTomorrow Labs
+                  </h3>
+                  <span
+                    class="text-[11px] rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/40 px-2 py-0.5"
+                    >R&amp;D</span
+                  >
+                </div>
+                <p class="text-xs text-slate-400 mb-3">
+                  Experimental agents, prototypes, and early-stage ideas built in
+                  public before they graduate into the core platform.
+                </p>
+                <p class="text-[11px] text-accent group-hover:underline">
+                  Visit Labs →
+                </p>
+              </a>
+
+              <!-- Admin / Console -->
+              <a
+                href="https://admin.swarmshield.cloud"
+                class="group rounded-2xl border border-slate-800 bg-slate-950/70 p-4 hover:border-accent/70 hover:-translate-y-1 transition transform"
+              >
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="font-semibold text-slate-50 text-sm">
+                    Swarm Shield Console
+                  </h3>
+                  <span
+                    class="text-[11px] rounded-full bg-slate-700/80 text-slate-200 border border-slate-500/80 px-2 py-0.5"
+                    >Dashboard</span
+                  >
+                </div>
+                <p class="text-xs text-slate-400 mb-3">
+                  Central admin for managing agents, projects, environments, and
+                  future organization-level features.
+                </p>
+                <p class="text-[11px] text-accent group-hover:underline">
+                  Open Console →
+                </p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Developer section -->
+        <section id="developers" class="bg-slate-950">
+          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div class="grid lg:grid-cols-2 gap-10 items-start">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-semibold text-slate-50">
+                  Built for developers, schools, and small security teams.
+                </h2>
+                <p class="mt-3 text-sm text-slate-400 max-w-lg">
+                  Swarm Shield is designed to be practical on day one: easy to
+                  deploy on Cloudflare + Vercel, friendly to solo builders, and
+                  flexible enough for small organizations that need real-world
+                  security without a 6-figure budget.
+                </p>
+
+                <div class="mt-6 space-y-4 text-sm text-slate-300">
+                  <div class="flex gap-3">
+                    <span class="mt-1 text-accent">▹</span>
+                    <p>
+                      <span class="font-medium text-slate-100"
+                        >Drop-in dashboards &amp; workers</span
+                      >
+                      — connect to existing logs, events, and AI workflows.
+                    </p>
+                  </div>
+                  <div class="flex gap-3">
+                    <span class="mt-1 text-accent">▹</span>
+                    <p>
+                      <span class="font-medium text-slate-100"
+                        >Open-source first</span
+                      >
+                      — projects live on GitHub under the Swarm Shield ecosystem.
+                    </p>
+                  </div>
+                  <div class="flex gap-3">
+                    <span class="mt-1 text-accent">▹</span>
+                    <p>
+                      <span class="font-medium text-slate-100"
+                        >Education-friendly</span
+                      >
+                      — safe defaults and simple patterns for classrooms and
+                      bootcamps.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-4 text-sm">
+                <div
+                  class="rounded-2xl border border-slate-800 bg-slate-950/70 p-4"
+                >
+                  <p
+                    class="text-[11px] uppercase tracking-[0.22em] text-slate-400 mb-2"
+                  >
+                    For Developers
+                  </p>
+                  <ul class="space-y-2 text-slate-300">
+                    <li>
+                      <span class="font-medium text-slate-100">Docs:</span>
+                      <a
+                        href="https://docs.swarmshield.cloud"
+                        class="text-accent hover:underline ml-1"
+                        >docs.swarmshield.cloud</a
+                      >
+                    </li>
+                    <li>
+                      <span class="font-medium text-slate-100">API:</span>
+                      <a
+                        href="https://api.swarmshield.cloud"
+                        class="text-accent hover:underline ml-1"
+                        >api.swarmshield.cloud</a
+                      >
+                    </li>
+                    <li>
+                      <span class="font-medium text-slate-100">GitHub:</span>
+                      <a
+                        href="https://github.com/Bxk756"
+                        class="text-accent hover:underline ml-1"
+                        >github.com/Bxk756</a
+                      >
+                    </li>
+                    <li>
+                      <span class="font-medium text-slate-100">Status:</span>
+                      <span class="ml-1 text-slate-400"
+                        >status.swarmshield.cloud (coming soon)</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="rounded-2xl border border-slate-800 bg-slate-950/70 p-4"
+                >
+                  <p
+                    class="text-[11px] uppercase tracking-[0.22em] text-slate-400 mb-2"
+                  >
+                    Contact &amp; Support
+                  </p>
+                  <ul class="space-y-1 text-slate-300">
+                    <li>
+                      General:
+                      <span class="text-slate-100">support@swarmshield.cloud</span>
+                    </li>
+                    <li>
+                      A2A Shield:
+                      <span class="text-slate-100">team@a2ashield.cloud</span>
+                    </li>
+                  </ul>
+                  <p class="mt-3 text-xs text-slate-500">
+                    Swarm Shield LLC • Virginia Beach, VA • Operating in the AI
+                    security &amp; cloud ecosystem.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sponsors section -->
+        <section id="sponsors" class="border-t border-slate-800/60 bg-slate-950/80">
+          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-semibold text-slate-50">
+                  Help grow open-source AI security.
+                </h2>
+                <p class="mt-3 text-sm text-slate-400 max-w-lg">
+                  GitHub Sponsors makes it possible for Swarm Shield to keep
+                  shipping agents, dashboards, and education tools that are free
+                  for the people who need them most — students, indie developers,
+                  and small teams without a dedicated security budget.
+                </p>
+                <ul class="mt-4 space-y-2 text-sm text-slate-300">
+                  <li>• Fund development of new agents &amp; safety tools</li>
+                  <li>• Support maintenance of existing open-source repos</li>
+                  <li>• Unlock more resources for schools &amp; learners</li>
+                </ul>
+              </div>
+              <div>
+                <div
+                  class="rounded-2xl border border-amber-500/40 bg-amber-500/5 p-5"
+                >
+                  <p
+                    class="text-[11px] uppercase tracking-[0.22em] text-amber-300 mb-2"
+                  >
+                    Sponsor on GitHub
+                  </p>
+                  <p class="text-sm text-slate-100 mb-3">
+                    Current goal: <span class="font-semibold">10 monthly sponsors</span>.
+                  </p>
+                  <p class="text-xs text-slate-300 mb-4">
+                    Reaching this goal helps cover infrastructure and dev time
+                    needed to keep releasing open-source AI security tools under
+                    the Swarm Shield ecosystem.
+                  </p>
+                  <a
+                    href="https://github.com/sponsors/Bxk756"
+                    target="_blank"
+                    class="inline-flex items-center justify-center rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-slate-950 hover:bg-amber-400 transition"
+                  >
+                    ★ Become a monthly sponsor
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Company / footer top -->
+        <section id="company" class="bg-slate-950">
+          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="grid md:grid-cols-3 gap-8 text-sm">
+              <div>
+                <h3 class="font-semibold text-slate-50 mb-2">
+                  Swarm Shield LLC
+                </h3>
+                <p class="text-slate-400 text-sm">
+                  Independent AI security studio focused on multi-agent defense,
+                  observability, and education — operating from Virginia Beach, VA.
+                </p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-50 mb-2">Ecosystem</h3>
+                <ul class="space-y-1 text-slate-300">
+                  <li><a href="#products" class="hover:text-accent">Platform overview</a></li>
+                  <li>
+                    <a
+                      href="https://github.com/Bxk756"
+                      target="_blank"
+                      class="hover:text-accent"
+                      >GitHub repositories</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/sponsors/Bxk756"
+                      target="_blank"
+                      class="hover:text-accent"
+                      >GitHub Sponsors</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-50 mb-2">Contact</h3>
+                <ul class="space-y-1 text-slate-300">
+                  <li>General: support@swarmshield.cloud</li>
+                  <li>A2A Shield: team@a2ashield.cloud</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Bottom footer -->
+      <footer class="border-t border-slate-800 bg-slate-950">
+        <div
+          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500"
+        >
+          <span>© 2025 Swarm Shield LLC. All rights reserved.</span>
+          <span class="text-[11px]">
+            Built on Cloudflare · Vercel · GitHub · AI-driven security
+          </span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
