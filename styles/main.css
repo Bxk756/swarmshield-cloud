@@ -5,3 +5,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Optional: glow background optimization */
+.glow-bg {
+  will-change: opacity, filter, transform;
+}
