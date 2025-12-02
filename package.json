@@ -1,5 +1,5 @@
 {
-  "name": "swarmshield-site",
+  "name": "swarmshield-cloud",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,6 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
